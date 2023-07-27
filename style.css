@@ -1,0 +1,95 @@
+
+html {
+height:100%;
+}
+body {
+background-color:#333;
+text-align:center;
+height:100%;
+}
+.footerlist {
+height:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+ul {
+list-style-type:none;
+display:inline-block;
+}
+li {
+display:inline-block;  
+width:40px;
+height:40px;
+border-radius:50%;
+margin:20px;
+text-align:center;
+position:relative;
+}
+li:before  {
+transition: opacity .4s linear, height .4s linear, width .4s linear;
+background: transparent;
+opacity: 0;
+height: 0;
+width: 0;
+content: '';
+display: block;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) translateZ(0);
+-ms-transform: translate(-50%, -50%) translateZ(0);
+z-index:-1;    
+}
+li:hover:before {
+opacity: 1;
+height: 105%;
+width: 105%;
+background:#333;
+}
+li:hover>a {
+color:white;
+}
+.fa {
+font-size:1.5em; 
+line-height:40px; /* should be inherit */
+}
+/* Individual icon styles */
+.fb>a {
+color:#4267b2;
+}
+.tw>a {
+color:#1da1f2;
+}
+.ig>a {
+color:#d10869;
+}
+.pin>a {
+color:#ad081b;
+}
+li.fb {
+border: 2px solid #4267b2;
+}
+li.fb:hover:before {
+background:#4267b2;
+}
+li.tw {
+border: 2px solid #1da1f2;
+}
+li.tw:hover:before {
+background:#1da1f2;
+}
+li.ig {
+border: 2px solid #d10869;
+}
+li.ig:hover:before {
+background:#d10869;
+}
+li.pin {
+border:2px solid #ad081b;
+}
+li.pin:hover:before {
+background:#ad081b;
+}
+
